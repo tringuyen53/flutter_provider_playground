@@ -13,12 +13,26 @@ class AuthRepository {
   Stream<AppUser?> authStateChanges() => _authState.stream;
   AppUser? get currentUser => _authState.value;
 
-  var email = "test@test.com";
-  var password = "test123";
-
   final List<FakeAppUser> _users = [];
 
   Future<void> signInWithEmailAndPassword(String email, String password) async {
+    await delay(addDelay);
+    // check if the email is already in use
+    for (final u in _users) {
+      if (u.email == email) {
+        throw const AppException.emailAlreadyInUse();
+      }
+    }
+    // minimum password length requirement
+    if (password.length < 8) {
+      throw const AppException.userNotFound();
+    }
+    // create new user
+    _createNewUser(email, password);
+  }
+
+  Future<void> createUserWithEmailAndPassword(
+      String email, String password) async {
     await delay(addDelay);
     // check if the email is already in use
     for (final u in _users) {
