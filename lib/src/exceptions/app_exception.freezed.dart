@@ -20,6 +20,7 @@ mixin _$AppException {
   TResult when<TResult extends Object?>({
     required TResult Function() emailAlreadyInUse,
     required TResult Function() weakPassword,
+    required TResult Function() invalidPassword,
     required TResult Function() wrongPassword,
     required TResult Function() userNotFound,
     required TResult Function(String status) parseOrderFailure,
@@ -29,6 +30,7 @@ mixin _$AppException {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? emailAlreadyInUse,
     TResult Function()? weakPassword,
+    TResult Function()? invalidPassword,
     TResult Function()? wrongPassword,
     TResult Function()? userNotFound,
     TResult Function(String status)? parseOrderFailure,
@@ -38,6 +40,7 @@ mixin _$AppException {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? emailAlreadyInUse,
     TResult Function()? weakPassword,
+    TResult Function()? invalidPassword,
     TResult Function()? wrongPassword,
     TResult Function()? userNotFound,
     TResult Function(String status)? parseOrderFailure,
@@ -48,6 +51,7 @@ mixin _$AppException {
   TResult map<TResult extends Object?>({
     required TResult Function(EmailAlreadyInUse value) emailAlreadyInUse,
     required TResult Function(WeakPassword value) weakPassword,
+    required TResult Function(InvalidPassword value) invalidPassword,
     required TResult Function(WrongPassword value) wrongPassword,
     required TResult Function(UserNotFound value) userNotFound,
     required TResult Function(ParseOrderFailure value) parseOrderFailure,
@@ -57,6 +61,7 @@ mixin _$AppException {
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(EmailAlreadyInUse value)? emailAlreadyInUse,
     TResult Function(WeakPassword value)? weakPassword,
+    TResult Function(InvalidPassword value)? invalidPassword,
     TResult Function(WrongPassword value)? wrongPassword,
     TResult Function(UserNotFound value)? userNotFound,
     TResult Function(ParseOrderFailure value)? parseOrderFailure,
@@ -66,6 +71,7 @@ mixin _$AppException {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(EmailAlreadyInUse value)? emailAlreadyInUse,
     TResult Function(WeakPassword value)? weakPassword,
+    TResult Function(InvalidPassword value)? invalidPassword,
     TResult Function(WrongPassword value)? wrongPassword,
     TResult Function(UserNotFound value)? userNotFound,
     TResult Function(ParseOrderFailure value)? parseOrderFailure,
@@ -133,6 +139,7 @@ class _$EmailAlreadyInUse implements EmailAlreadyInUse {
   TResult when<TResult extends Object?>({
     required TResult Function() emailAlreadyInUse,
     required TResult Function() weakPassword,
+    required TResult Function() invalidPassword,
     required TResult Function() wrongPassword,
     required TResult Function() userNotFound,
     required TResult Function(String status) parseOrderFailure,
@@ -145,6 +152,7 @@ class _$EmailAlreadyInUse implements EmailAlreadyInUse {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? emailAlreadyInUse,
     TResult Function()? weakPassword,
+    TResult Function()? invalidPassword,
     TResult Function()? wrongPassword,
     TResult Function()? userNotFound,
     TResult Function(String status)? parseOrderFailure,
@@ -157,6 +165,7 @@ class _$EmailAlreadyInUse implements EmailAlreadyInUse {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? emailAlreadyInUse,
     TResult Function()? weakPassword,
+    TResult Function()? invalidPassword,
     TResult Function()? wrongPassword,
     TResult Function()? userNotFound,
     TResult Function(String status)? parseOrderFailure,
@@ -173,6 +182,7 @@ class _$EmailAlreadyInUse implements EmailAlreadyInUse {
   TResult map<TResult extends Object?>({
     required TResult Function(EmailAlreadyInUse value) emailAlreadyInUse,
     required TResult Function(WeakPassword value) weakPassword,
+    required TResult Function(InvalidPassword value) invalidPassword,
     required TResult Function(WrongPassword value) wrongPassword,
     required TResult Function(UserNotFound value) userNotFound,
     required TResult Function(ParseOrderFailure value) parseOrderFailure,
@@ -185,6 +195,7 @@ class _$EmailAlreadyInUse implements EmailAlreadyInUse {
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(EmailAlreadyInUse value)? emailAlreadyInUse,
     TResult Function(WeakPassword value)? weakPassword,
+    TResult Function(InvalidPassword value)? invalidPassword,
     TResult Function(WrongPassword value)? wrongPassword,
     TResult Function(UserNotFound value)? userNotFound,
     TResult Function(ParseOrderFailure value)? parseOrderFailure,
@@ -197,6 +208,7 @@ class _$EmailAlreadyInUse implements EmailAlreadyInUse {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(EmailAlreadyInUse value)? emailAlreadyInUse,
     TResult Function(WeakPassword value)? weakPassword,
+    TResult Function(InvalidPassword value)? invalidPassword,
     TResult Function(WrongPassword value)? wrongPassword,
     TResult Function(UserNotFound value)? userNotFound,
     TResult Function(ParseOrderFailure value)? parseOrderFailure,
@@ -256,6 +268,7 @@ class _$WeakPassword implements WeakPassword {
   TResult when<TResult extends Object?>({
     required TResult Function() emailAlreadyInUse,
     required TResult Function() weakPassword,
+    required TResult Function() invalidPassword,
     required TResult Function() wrongPassword,
     required TResult Function() userNotFound,
     required TResult Function(String status) parseOrderFailure,
@@ -268,6 +281,7 @@ class _$WeakPassword implements WeakPassword {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? emailAlreadyInUse,
     TResult Function()? weakPassword,
+    TResult Function()? invalidPassword,
     TResult Function()? wrongPassword,
     TResult Function()? userNotFound,
     TResult Function(String status)? parseOrderFailure,
@@ -280,6 +294,7 @@ class _$WeakPassword implements WeakPassword {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? emailAlreadyInUse,
     TResult Function()? weakPassword,
+    TResult Function()? invalidPassword,
     TResult Function()? wrongPassword,
     TResult Function()? userNotFound,
     TResult Function(String status)? parseOrderFailure,
@@ -296,6 +311,7 @@ class _$WeakPassword implements WeakPassword {
   TResult map<TResult extends Object?>({
     required TResult Function(EmailAlreadyInUse value) emailAlreadyInUse,
     required TResult Function(WeakPassword value) weakPassword,
+    required TResult Function(InvalidPassword value) invalidPassword,
     required TResult Function(WrongPassword value) wrongPassword,
     required TResult Function(UserNotFound value) userNotFound,
     required TResult Function(ParseOrderFailure value) parseOrderFailure,
@@ -308,6 +324,7 @@ class _$WeakPassword implements WeakPassword {
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(EmailAlreadyInUse value)? emailAlreadyInUse,
     TResult Function(WeakPassword value)? weakPassword,
+    TResult Function(InvalidPassword value)? invalidPassword,
     TResult Function(WrongPassword value)? wrongPassword,
     TResult Function(UserNotFound value)? userNotFound,
     TResult Function(ParseOrderFailure value)? parseOrderFailure,
@@ -320,6 +337,7 @@ class _$WeakPassword implements WeakPassword {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(EmailAlreadyInUse value)? emailAlreadyInUse,
     TResult Function(WeakPassword value)? weakPassword,
+    TResult Function(InvalidPassword value)? invalidPassword,
     TResult Function(WrongPassword value)? wrongPassword,
     TResult Function(UserNotFound value)? userNotFound,
     TResult Function(ParseOrderFailure value)? parseOrderFailure,
@@ -334,6 +352,135 @@ class _$WeakPassword implements WeakPassword {
 
 abstract class WeakPassword implements AppException {
   const factory WeakPassword() = _$WeakPassword;
+}
+
+/// @nodoc
+abstract class _$$InvalidPasswordCopyWith<$Res> {
+  factory _$$InvalidPasswordCopyWith(
+          _$InvalidPassword value, $Res Function(_$InvalidPassword) then) =
+      __$$InvalidPasswordCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$InvalidPasswordCopyWithImpl<$Res>
+    extends _$AppExceptionCopyWithImpl<$Res>
+    implements _$$InvalidPasswordCopyWith<$Res> {
+  __$$InvalidPasswordCopyWithImpl(
+      _$InvalidPassword _value, $Res Function(_$InvalidPassword) _then)
+      : super(_value, (v) => _then(v as _$InvalidPassword));
+
+  @override
+  _$InvalidPassword get _value => super._value as _$InvalidPassword;
+}
+
+/// @nodoc
+
+class _$InvalidPassword implements InvalidPassword {
+  const _$InvalidPassword();
+
+  @override
+  String toString() {
+    return 'AppException.invalidPassword()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$InvalidPassword);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() emailAlreadyInUse,
+    required TResult Function() weakPassword,
+    required TResult Function() invalidPassword,
+    required TResult Function() wrongPassword,
+    required TResult Function() userNotFound,
+    required TResult Function(String status) parseOrderFailure,
+  }) {
+    return invalidPassword();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? emailAlreadyInUse,
+    TResult Function()? weakPassword,
+    TResult Function()? invalidPassword,
+    TResult Function()? wrongPassword,
+    TResult Function()? userNotFound,
+    TResult Function(String status)? parseOrderFailure,
+  }) {
+    return invalidPassword?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? emailAlreadyInUse,
+    TResult Function()? weakPassword,
+    TResult Function()? invalidPassword,
+    TResult Function()? wrongPassword,
+    TResult Function()? userNotFound,
+    TResult Function(String status)? parseOrderFailure,
+    required TResult orElse(),
+  }) {
+    if (invalidPassword != null) {
+      return invalidPassword();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(EmailAlreadyInUse value) emailAlreadyInUse,
+    required TResult Function(WeakPassword value) weakPassword,
+    required TResult Function(InvalidPassword value) invalidPassword,
+    required TResult Function(WrongPassword value) wrongPassword,
+    required TResult Function(UserNotFound value) userNotFound,
+    required TResult Function(ParseOrderFailure value) parseOrderFailure,
+  }) {
+    return invalidPassword(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(EmailAlreadyInUse value)? emailAlreadyInUse,
+    TResult Function(WeakPassword value)? weakPassword,
+    TResult Function(InvalidPassword value)? invalidPassword,
+    TResult Function(WrongPassword value)? wrongPassword,
+    TResult Function(UserNotFound value)? userNotFound,
+    TResult Function(ParseOrderFailure value)? parseOrderFailure,
+  }) {
+    return invalidPassword?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(EmailAlreadyInUse value)? emailAlreadyInUse,
+    TResult Function(WeakPassword value)? weakPassword,
+    TResult Function(InvalidPassword value)? invalidPassword,
+    TResult Function(WrongPassword value)? wrongPassword,
+    TResult Function(UserNotFound value)? userNotFound,
+    TResult Function(ParseOrderFailure value)? parseOrderFailure,
+    required TResult orElse(),
+  }) {
+    if (invalidPassword != null) {
+      return invalidPassword(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class InvalidPassword implements AppException {
+  const factory InvalidPassword() = _$InvalidPassword;
 }
 
 /// @nodoc
@@ -379,6 +526,7 @@ class _$WrongPassword implements WrongPassword {
   TResult when<TResult extends Object?>({
     required TResult Function() emailAlreadyInUse,
     required TResult Function() weakPassword,
+    required TResult Function() invalidPassword,
     required TResult Function() wrongPassword,
     required TResult Function() userNotFound,
     required TResult Function(String status) parseOrderFailure,
@@ -391,6 +539,7 @@ class _$WrongPassword implements WrongPassword {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? emailAlreadyInUse,
     TResult Function()? weakPassword,
+    TResult Function()? invalidPassword,
     TResult Function()? wrongPassword,
     TResult Function()? userNotFound,
     TResult Function(String status)? parseOrderFailure,
@@ -403,6 +552,7 @@ class _$WrongPassword implements WrongPassword {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? emailAlreadyInUse,
     TResult Function()? weakPassword,
+    TResult Function()? invalidPassword,
     TResult Function()? wrongPassword,
     TResult Function()? userNotFound,
     TResult Function(String status)? parseOrderFailure,
@@ -419,6 +569,7 @@ class _$WrongPassword implements WrongPassword {
   TResult map<TResult extends Object?>({
     required TResult Function(EmailAlreadyInUse value) emailAlreadyInUse,
     required TResult Function(WeakPassword value) weakPassword,
+    required TResult Function(InvalidPassword value) invalidPassword,
     required TResult Function(WrongPassword value) wrongPassword,
     required TResult Function(UserNotFound value) userNotFound,
     required TResult Function(ParseOrderFailure value) parseOrderFailure,
@@ -431,6 +582,7 @@ class _$WrongPassword implements WrongPassword {
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(EmailAlreadyInUse value)? emailAlreadyInUse,
     TResult Function(WeakPassword value)? weakPassword,
+    TResult Function(InvalidPassword value)? invalidPassword,
     TResult Function(WrongPassword value)? wrongPassword,
     TResult Function(UserNotFound value)? userNotFound,
     TResult Function(ParseOrderFailure value)? parseOrderFailure,
@@ -443,6 +595,7 @@ class _$WrongPassword implements WrongPassword {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(EmailAlreadyInUse value)? emailAlreadyInUse,
     TResult Function(WeakPassword value)? weakPassword,
+    TResult Function(InvalidPassword value)? invalidPassword,
     TResult Function(WrongPassword value)? wrongPassword,
     TResult Function(UserNotFound value)? userNotFound,
     TResult Function(ParseOrderFailure value)? parseOrderFailure,
@@ -502,6 +655,7 @@ class _$UserNotFound implements UserNotFound {
   TResult when<TResult extends Object?>({
     required TResult Function() emailAlreadyInUse,
     required TResult Function() weakPassword,
+    required TResult Function() invalidPassword,
     required TResult Function() wrongPassword,
     required TResult Function() userNotFound,
     required TResult Function(String status) parseOrderFailure,
@@ -514,6 +668,7 @@ class _$UserNotFound implements UserNotFound {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? emailAlreadyInUse,
     TResult Function()? weakPassword,
+    TResult Function()? invalidPassword,
     TResult Function()? wrongPassword,
     TResult Function()? userNotFound,
     TResult Function(String status)? parseOrderFailure,
@@ -526,6 +681,7 @@ class _$UserNotFound implements UserNotFound {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? emailAlreadyInUse,
     TResult Function()? weakPassword,
+    TResult Function()? invalidPassword,
     TResult Function()? wrongPassword,
     TResult Function()? userNotFound,
     TResult Function(String status)? parseOrderFailure,
@@ -542,6 +698,7 @@ class _$UserNotFound implements UserNotFound {
   TResult map<TResult extends Object?>({
     required TResult Function(EmailAlreadyInUse value) emailAlreadyInUse,
     required TResult Function(WeakPassword value) weakPassword,
+    required TResult Function(InvalidPassword value) invalidPassword,
     required TResult Function(WrongPassword value) wrongPassword,
     required TResult Function(UserNotFound value) userNotFound,
     required TResult Function(ParseOrderFailure value) parseOrderFailure,
@@ -554,6 +711,7 @@ class _$UserNotFound implements UserNotFound {
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(EmailAlreadyInUse value)? emailAlreadyInUse,
     TResult Function(WeakPassword value)? weakPassword,
+    TResult Function(InvalidPassword value)? invalidPassword,
     TResult Function(WrongPassword value)? wrongPassword,
     TResult Function(UserNotFound value)? userNotFound,
     TResult Function(ParseOrderFailure value)? parseOrderFailure,
@@ -566,6 +724,7 @@ class _$UserNotFound implements UserNotFound {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(EmailAlreadyInUse value)? emailAlreadyInUse,
     TResult Function(WeakPassword value)? weakPassword,
+    TResult Function(InvalidPassword value)? invalidPassword,
     TResult Function(WrongPassword value)? wrongPassword,
     TResult Function(UserNotFound value)? userNotFound,
     TResult Function(ParseOrderFailure value)? parseOrderFailure,
@@ -649,6 +808,7 @@ class _$ParseOrderFailure implements ParseOrderFailure {
   TResult when<TResult extends Object?>({
     required TResult Function() emailAlreadyInUse,
     required TResult Function() weakPassword,
+    required TResult Function() invalidPassword,
     required TResult Function() wrongPassword,
     required TResult Function() userNotFound,
     required TResult Function(String status) parseOrderFailure,
@@ -661,6 +821,7 @@ class _$ParseOrderFailure implements ParseOrderFailure {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? emailAlreadyInUse,
     TResult Function()? weakPassword,
+    TResult Function()? invalidPassword,
     TResult Function()? wrongPassword,
     TResult Function()? userNotFound,
     TResult Function(String status)? parseOrderFailure,
@@ -673,6 +834,7 @@ class _$ParseOrderFailure implements ParseOrderFailure {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? emailAlreadyInUse,
     TResult Function()? weakPassword,
+    TResult Function()? invalidPassword,
     TResult Function()? wrongPassword,
     TResult Function()? userNotFound,
     TResult Function(String status)? parseOrderFailure,
@@ -689,6 +851,7 @@ class _$ParseOrderFailure implements ParseOrderFailure {
   TResult map<TResult extends Object?>({
     required TResult Function(EmailAlreadyInUse value) emailAlreadyInUse,
     required TResult Function(WeakPassword value) weakPassword,
+    required TResult Function(InvalidPassword value) invalidPassword,
     required TResult Function(WrongPassword value) wrongPassword,
     required TResult Function(UserNotFound value) userNotFound,
     required TResult Function(ParseOrderFailure value) parseOrderFailure,
@@ -701,6 +864,7 @@ class _$ParseOrderFailure implements ParseOrderFailure {
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(EmailAlreadyInUse value)? emailAlreadyInUse,
     TResult Function(WeakPassword value)? weakPassword,
+    TResult Function(InvalidPassword value)? invalidPassword,
     TResult Function(WrongPassword value)? wrongPassword,
     TResult Function(UserNotFound value)? userNotFound,
     TResult Function(ParseOrderFailure value)? parseOrderFailure,
@@ -713,6 +877,7 @@ class _$ParseOrderFailure implements ParseOrderFailure {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(EmailAlreadyInUse value)? emailAlreadyInUse,
     TResult Function(WeakPassword value)? weakPassword,
+    TResult Function(InvalidPassword value)? invalidPassword,
     TResult Function(WrongPassword value)? wrongPassword,
     TResult Function(UserNotFound value)? userNotFound,
     TResult Function(ParseOrderFailure value)? parseOrderFailure,

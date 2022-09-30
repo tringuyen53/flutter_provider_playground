@@ -1,5 +1,3 @@
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -23,8 +21,30 @@ class EmailPasswordSignInScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Sign In')),
-      body: EmailPasswordSignInContents(formType: formType),
+      backgroundColor: Colors.blueGrey[900],
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            const Image(
+              width: 500,
+              height: 100,
+              image: NetworkImage(
+                  'https://flutter.github.io/assets-for-api-docs/assets/widgets/owl.jpg'),
+            ),
+            Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                color: Colors.grey[800],
+              ),
+              margin: const EdgeInsets.symmetric(horizontal: 130),
+              padding: const EdgeInsets.symmetric(vertical: 30),
+              child: EmailPasswordSignInContents(formType: formType),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
@@ -57,6 +77,7 @@ class _EmailPasswordSignInContentsState
   String get password => _passwordController.text;
 
   var _submitted = false;
+  var _passwordVisible = false;
 
   @override
   void dispose() {
@@ -150,23 +171,28 @@ class _EmailPasswordSignInContentsState
                   enabled: !state.isLoading,
                 ),
                 autovalidateMode: AutovalidateMode.onUserInteraction,
+                // obscureText: true,
+                inputFormatters: <TextInputFormatter>[
+                  ValidatorInputFormatter(
+                      editingValidator: MinLengthStringValidator(8)),
+                ],
                 validator: (password) => !_submitted
                     ? null
                     : state.passwordErrorText(password ?? ''),
               ),
-              gapH8,
+              gapH16,
               PrimaryButton(
                 text: state.primaryButtonText,
                 isLoading: state.isLoading,
                 onPressed: state.isLoading ? null : () => _submit(state),
               ),
               gapH8,
-              CustomTextButton(
-                text: state.secondaryButtonText,
-                onPressed: state.isLoading
-                    ? null
-                    : () => _updateFormType(state.secondaryActionFormType),
-              ),
+              // CustomTextButton(
+              //   text: state.secondaryButtonText,
+              //   onPressed: state.isLoading
+              //       ? null
+              //       : () => _updateFormType(state.secondaryActionFormType),
+              // ),
             ],
           ),
         ),

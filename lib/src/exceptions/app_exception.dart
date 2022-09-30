@@ -7,6 +7,7 @@ class AppException with _$AppException {
   // Auth
   const factory AppException.emailAlreadyInUse() = EmailAlreadyInUse;
   const factory AppException.weakPassword() = WeakPassword;
+  const factory AppException.invalidPassword() = InvalidPassword;
   const factory AppException.wrongPassword() = WrongPassword;
   const factory AppException.userNotFound() = UserNotFound;
   // Orders
@@ -38,6 +39,10 @@ extension AppExceptionDetails on AppException {
       wrongPassword: () => AppExceptionData(
         'wrong-password',
         'Wrong password',
+      ),
+      invalidPassword: () => AppExceptionData(
+        'invalid-password',
+        'Invalid password',
       ),
       userNotFound: () => AppExceptionData(
         'user-not-found',

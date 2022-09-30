@@ -25,7 +25,7 @@ class AuthRepository {
     }
     // minimum password length requirement
     if (password.length < 8) {
-      throw const AppException.userNotFound();
+      throw const AppException.invalidPassword();
     }
     // create new user
     _createNewUser(email, password);
@@ -42,7 +42,7 @@ class AuthRepository {
     }
     // minimum password length requirement
     if (password.length < 8) {
-      throw const AppException.userNotFound();
+      throw const AppException.invalidPassword();
     }
     // create new user
     _createNewUser(email, password);
